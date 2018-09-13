@@ -1,0 +1,105 @@
+ .carousel {
+     position: relative;
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .carousel__slide {
+     margin-right: auto;
+     margin-left: auto;
+     display: none;
+     list-style-type: none;
+     text-align: center;
+ }
+
+ .carousel__slide--active {
+     display: block;
+     width: 100vw;
+     min-height: 100vh;
+     transition: opacity .5s ease;
+     display: flex;
+     justify-content: center;
+     align-items: flex-end;
+ }
+
+.carousel__title {
+    font-size: 44px;
+    color: #fff;
+    text-shadow: 1px 1px 2px black, 0 0 1em #000;
+    z-index: 999999;
+    margin-bottom: 10vh;
+}
+
+ .carousel__arrow {
+     position: absolute;
+     top: 50%;
+     display: block;
+     color: #fff;
+     font-weight: bold;
+     text-shadow: 1px 1px 2px black, 0 0 1em #000;
+     z-index: 99999;
+     cursor: pointer;
+     opacity: 0.75;
+     transform: translateY(-50%);
+     transition: opacity 0.15s cubic-bezier(0.4, 0, 1, 1);
+ }
+
+ @media (max-width: 991px) {
+     .carousel__arrow .fa {
+         font-size: 3em;
+     }
+ }
+
+ .carousel__arrow:focus {
+     outline: 0;
+ }
+
+ .carousel__arrow:hover {
+     opacity: 0.5;
+ }
+
+ .carousel__arrow--left {
+     left: 32px;
+ }
+
+ .carousel__arrow--right {
+     right: 32px;
+ }
+
+ .carousel__indicators {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     position: absolute;
+     bottom: 5vh;
+     z-index: 9999;
+
+ }
+
+ .carousel__indicator {
+     display: block;
+     margin-left: 9px;
+     width: 18px;
+     height: 18px;
+     border-radius: 50%;
+     background-color: transparent;
+     border: 1px solid #fff;
+     cursor: pointer;
+     opacity: 0.45;
+     transition: opacity 0.15s cubic-bezier(0.4, 0, 1, 1);
+     list-style-type: none;
+     box-shadow: 1px 1px 2px black, 0 0 1em #000;
+
+ }
+
+ .carousel__indicator:hover {
+     opacity: 0.95;
+ }
+
+ .carousel__indicator--active,
+ .carousel__indicator--active:hover {
+     opacity: 0.95;
+     background-color: #fff;
+ }
